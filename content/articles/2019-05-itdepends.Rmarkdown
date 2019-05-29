@@ -159,8 +159,9 @@ removal of dependencies.
 ## Assess usage with `itdepends::dep_usage()`
 
 `dep_usage_proj()` and `dep_usage_pkg()` return a tibble of
-every function call in your project or package. This information can then be
-used to do things like
+every function call^[Technically not every function call, things like
+`lapply(x, fun)` will miss the calls to `fun`.] in your project or package.
+This information can then be used to do things like
 
 - show which packages you are using the most in a project
 
